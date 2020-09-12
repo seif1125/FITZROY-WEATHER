@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Allan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.night{
+
+  background-image: url('./Media/night.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.day{
+
+  background-image: url('./Media/day.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+/*TitleImage*/
+
+#tit{
+
+  margin-right: 40%;
+  margin-left: 40%;
+  margin-top:0;
+   width:30%;
+   font-size:400%;
+   height: 5vh;
+   font-family:  'Alef', sans-serif;
+   padding:0;
+}
+#subtit{
+  margin-right: 45vw;
+  margin-left: 45vw;
+  width: 30vw;
+  height: 3vh;
+  margin-top: 2%;
+  margin-bottom:2%;
+  padding:0;
+  font-family: 'Allan', cursive;
+}
+
+.dtitle{
+
+  color: #1A568C;
+}
+
+.ntitle{
+  color: white;
+}
+
+/*datetimepanel*/
+
+.datepanel-container{
+
+    height:4vh ;
+    width:30vw;
+    margin: 0,30%;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 0%;
+    margin-right: 35%;
+    margin-left: 35%;
+    border-radius:5% ;
+
+}
+
+#datetime{
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+.form-container{
+
+  background-color: rgba(0,0,0,0.6);
+  margin-right: 35%;
+  margin-left: 35%;
+  margin-top: 0.5%;
+  justify-content: center;
+  display: inline-block;
+  width: 30%;
+  padding:1% 4% ;
+}
+#autolbl{
+    
+color: white;
+width: 35%;
+margin-right: 25%;
+
+}
+
+#auto{
+margin-left: 0.5%;
+
+}
+
+.enabled-btn{
+
+  background-color: rgba(0,0,0,0);
+  border:2px solid rgb(255, 255,255);
+  color:white
+
+}
+
+.enabled-btn:hover{
+
+  background-color: rgba(0,0,0,0);
+  border:2px solid rgb(12, 140, 199);
+  color: rgb(12, 140, 199);
+
+}
+.disabled-btn{
+
+  background-color: rgba(0,0,0,0);
+  border:2px solid grey;
+  color:grey;
+
+}
+
+
+
+.flagic{
+
+  border-radius: 10%;
+ 
+  
+}
+.location{
+
+  color:white;
+   border-bottom: 1px solid white;
+   padding: 0px 1px;
+   font-size: 1.5em ;
+}
+
+.carousel{
+
+background-color: rgba(0,0,0,0.6);
+margin: 1% 35% ;
+
+width:30%;
+display: block;
+border-radius: 2%;
+text-align: center;
+
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration-style: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 29.5%;
+}
+.prev {
+  left: 29.5%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+#hr{
+
+  color:white;
+}
+
+
+.dot-cont{
+
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color:rgba(0,0,0,0);
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid white;
+  transition: background-color 0.6s ease;
+}
+.dot:hover {
+  background-color: #717171;
+}
+
+
+.activated{
+background-color: rgb(12, 140, 199);
+
+
+}
+
+.logo-weather{
+
+width:20%;
+margin: 0% 40%;
+
+}
+
+.detailtitle{
+  width:10%;
+margin: 0% 37%;
+font-size: 150%;
+color:white;
+text-align: center;
+}
+
+.detailtitlew{
+
+  width:20%;
+margin: 0% 40%;
+font-size: 170%;
+color:white;
+text-align: center;
+
+}
+.detailtitlet{
+
+  width:30%;
+margin: 0% 35%;
+font-size: 150%;
+color:white;
+text-align: center;
+
+}
+
+.detailedh{
+
+ width:30%;
+margin: 0% 35%;
+font-size: 500%;
+
+color: white;
+padding:1%;
+
+}
+.detailedp{
+
+ width:30%;
+margin: 0% 28%;
+font-size: 500%;
+padding:1%;
+color: white;
+
+
+}
+.detailedw{
+
+ width:30%;
+margin: 0% 28%;
+font-size: 500%;
+padding:1%;
+color: white;
+
+
+}
+.detailedt{
+
+ width:60%;
+margin: 0% 25%;
+font-size: 500%;
+padding:1%;
+color: white;
+
+
+}
+.descc{
+font-size: 120%;
+color: white;
+width: 40%;
+margin: 0% 32%;
+}
+
+.error-cont{
+
+  background-color: rgba(0,0,0,0.6);
+margin: 0.2% 35% ;
+  
+}
+.error-img{
+width: 5%;
+
+}
+.error-text{
+
+
+  color: red;
+}
+
+
+#d{
+  font-size: 50%;
+}
+#p{
+  font-size: 25%;
+}
+#w{
+  font-size: 25%;
+}
+#t{
+  font-size: 30%;
+}
