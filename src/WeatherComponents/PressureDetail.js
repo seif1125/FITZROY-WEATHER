@@ -14,11 +14,13 @@ function PressureDetail(props) {
   return (
     <div>
       <span className="detailtitle"> Pressure </span>
-      <img class="logo-weather" src={PressureIcon} />
-      <br />
+      <img  alt={'pressure icon'}class="logo-weather" src={PressureIcon} />
      
       <span className="detailedp">{props.p}<span id="p">hPa</span></span>
       <br />
+      <br/>
+      <br />
+    
 
     </div>
 

@@ -30,9 +30,9 @@ export default class WeatherDetailsSetting extends Component {
 
     for (let index = 0; index < this.state.filteredComponent.length; index++) {
       if (index === this.state.selectedindex) {
-        e.push(<span id={index} className="dot activated"></span>);
+        e.push(<span key={index} className="dot activated"></span>);
       } else {
-        e.push(<span id={index} className="dot "></span>);
+        e.push(<span key={index} className="dot "></span>);
       }
     }
     console.log(e);
@@ -69,6 +69,7 @@ export default class WeatherDetailsSetting extends Component {
     if (this.state.selectedindex !== 0 && this.state.selectedindex !== 3) {
       e[0] = 
         <a
+     
           title={
             "to " +
             this.state.componentCarouselNames[this.state.selectedindex - 1]
@@ -80,7 +81,9 @@ export default class WeatherDetailsSetting extends Component {
         </a>
       
       e[1] = 
+
         <a
+      
           title={
             "to " +
             this.state.componentCarouselNames[this.state.selectedindex + 1]
@@ -95,6 +98,8 @@ export default class WeatherDetailsSetting extends Component {
   else if (this.state.selectedindex === 0) {
      e[0] = 
      <a
+     key={'next'}
+    
      title={"to " + this.state.componentCarouselNames[3]}
      className="prev"
      onClick={this.prevDetail}
@@ -104,6 +109,8 @@ export default class WeatherDetailsSetting extends Component {
       
      e[1] = 
      <a
+        key={'prev'}
+    
      title={
      "to " +
      this.state.componentCarouselNames[this.state.selectedindex + 1]
@@ -118,6 +125,7 @@ export default class WeatherDetailsSetting extends Component {
   else {
     e[0] = 
       <a
+    
       title={
       "to " +
       this.state.componentCarouselNames[this.state.selectedindex - 1]
@@ -130,6 +138,7 @@ export default class WeatherDetailsSetting extends Component {
       
     e[1] = 
       <a
+    
       title={"to " + this.state.componentCarouselNames[0]}
       className="next"
       onClick={this.nextDetail}

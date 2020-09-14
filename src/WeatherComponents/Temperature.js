@@ -17,13 +17,11 @@ let convertedtemp=Math.round((props.t)-273.15);
   return (
     <div>
       <span className="detailtitlet"> Temperature </span>
-      <img  className="logo-weather" src={link} />
+      <img  alt={'temp icon'}className="logo-weather" src={link} />
       <span className="detailedt">{convertedtemp}° C </span>
-     
       <br />
       <span className="descc">{props.d}</span>
       <br />
-      <br /> 
       <br/>
     </div>
   );

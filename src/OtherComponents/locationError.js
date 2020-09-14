@@ -7,7 +7,7 @@ import React from 'react';
 import ErrorIcon from '../Media/erroricon.png';
 
 
-function  Error(props) {
+function  LocationError(props) {
   
   
 
@@ -22,4 +22,4 @@ function  Error(props) {
     );
 }
 
-  export default Error;
+  export default LocationError;

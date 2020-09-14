@@ -14,13 +14,12 @@ function WindDetail(props) {
     return (
       <div>
         <span className="detailtitlew"> Wind </span>
-        <img class="logo-weather" src={WindIcon} />
+        <img alt={'wind logo'}class="logo-weather" src={WindIcon} />
         <br />
         <br />
         <span className="detailedw">
            {props.ws}<span id="w">meter/sec,{props.wd}°</span>
         </span>
-        <br />
         <br />
         <br />
       </div>

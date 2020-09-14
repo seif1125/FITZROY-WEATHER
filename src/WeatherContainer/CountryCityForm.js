@@ -1,4 +1,4 @@
-import react, { Fragment } from 'react';
+import  { Fragment } from 'react';
 
 import '../Flags.css';
 import RegionSelect from 'react-region-flag-select';

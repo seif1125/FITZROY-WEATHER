@@ -12,7 +12,7 @@ class WeatherApiCaller extends React.Component {
     super(props);
 
     this.state = {
-      isAutomatically: true,
+      isAutomatically: false,
     };
 
     this.togglecheck = this.togglecheck.bind(this);
@@ -20,7 +20,9 @@ class WeatherApiCaller extends React.Component {
   
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+
+  }
 
   componentDidUpdate(prevProps) {
     
@@ -50,12 +52,14 @@ class WeatherApiCaller extends React.Component {
     }
     
     else {
+
+      if(this.props.auto===true){
          
       this.setState({ isAutomatically: true, tempreture: "" });
 
       this.getWeatherAutomatically();
     }
-
+  }
   }
 
   getData(data) {
@@ -80,6 +84,10 @@ class WeatherApiCaller extends React.Component {
 
   getWeatherAutomatically = async () => {
 
+
+
+
+ 
     const api = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?lat=${this.props.lat}&lon=${this.props.lon}&appid=${API_KEY2}`
     );
@@ -117,12 +125,16 @@ class WeatherApiCaller extends React.Component {
         error: "Failed to get Data ..Please Try Again",
       });
     }
+  
+
+
+
 
   };
 
   getWeatherManually = async () => {
     
-
+ 
     const api = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${this.state.cityStateName},${this.state.countrycode}&appid=${API_KEY2}`
     );
@@ -165,18 +177,23 @@ class WeatherApiCaller extends React.Component {
   render() {
     console.log(this.state)
     let e;
+   
       if(this.state.tempreture){
       
-        e=<WeatherDetails t={this.state.tempreture} d={this.state.weatherdescription} i={this.state.weathericon} h={this.state.humidity} p={this.state.pressure} ws={this.state.windspeed} wd={this.state.winddir}/>
+        e=< WeatherDetails key={'weatherdetail'} t={this.state.tempreture} d={this.state.weatherdescription} i={this.state.weathericon} h={this.state.humidity} p={this.state.pressure} ws={this.state.windspeed} wd={this.state.winddir}/>
       }
-      else if(!this.state.error==""){
+      if(this.state.error){
        e=<Error error={this.state.error}/>;
+        console.log(this.state.error)
+
+      }
         
+      else{
 
       }
       
     return (
-      <div>
+      <div key='weatherdet-div'>
         <CountryCityForm
           isAutomatically={this.state.isAutomatically}
           selectedCountry={this.state.countrycode}

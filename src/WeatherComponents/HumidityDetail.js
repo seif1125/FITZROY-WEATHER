@@ -14,11 +14,10 @@ function HumidityDetail(props) {
     return (
       <div>
         <span className="detailtitle"> Humidity </span>
-        <img class="logo-weather" src={HumidityIcon} />
+        <img alt={'humidity icon'} class="logo-weather" src={HumidityIcon} />
         <br />
         <br />
         <span className="detailedh">{props.h}<span id="d">%</span></span>
-        <br />
         <br />
         <br />
       </div>

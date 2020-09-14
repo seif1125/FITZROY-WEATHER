@@ -6,7 +6,7 @@ import React from 'react';
 import TitleImage from'./OtherComponents/TitleImage.js';
 import DateTimePanel from './OtherComponents/dateTimePanel.js';
 import WeatherApiCaller from './WeatherContainer/weatherApiCaller.js';
-
+import LocationError from './OtherComponents/locationError.js';
 
 
 
@@ -61,6 +61,7 @@ class App extends React.Component {
  render() {
   
     let background;
+    let errorelement='';
     if(this.state.isday){
       background="day";
     }
@@ -68,13 +69,18 @@ class App extends React.Component {
       background='night'
     }
  
+    if(this.state.auto===false){
+      
+     errorelement=<LocationError error={ "Geo location in your device blocked"}/>
+
+    }
 
       
     return(
       
   
      
-     <div className={background}>
+     <div key={'main div'} className={background}>
       
         <TitleImage 
         isday={this.state.isday}
@@ -82,11 +88,12 @@ class App extends React.Component {
 
         <DateTimePanel 
         date={this.state.date}/>
-
+      {errorelement}
        <WeatherApiCaller 
           auto={this.state.auto}
           lat={this.state.latitude}
          lon={this.state.longitude}
+        
         />
      
      </div>
@@ -120,7 +127,7 @@ class App extends React.Component {
 
     this.timerID = setInterval(
                 
-      () => this.getTime(),30000
+      () => this.getTime(),1000
     
     );
 
@@ -152,10 +159,23 @@ class App extends React.Component {
           auto:true,
           longitude:lon,
           latitude:lat,
+          errorlocation:true,
         }
                     
       );
-    },
+    },()=>{
+
+        this.setState(
+          {
+            auto: false,
+            errorlocation:false,
+       
+          }
+
+
+        );
+        console.log(this.state);
+    }
     )
                   
   }
