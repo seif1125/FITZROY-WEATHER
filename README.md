@@ -1,3 +1,3 @@
 A React.js webapp which gets the weather details using OpenweatherMap API
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/seif1125/FITZROY-WEATHER/blob/master/ezgif.com-video-to-gif.gif)
